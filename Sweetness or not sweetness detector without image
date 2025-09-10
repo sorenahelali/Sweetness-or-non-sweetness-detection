@@ -1,0 +1,91 @@
+#include <iostream>
+using namespace std;
+
+void apple()
+{
+    cout << "Which option do we choose in an apple: soft, normal, or very hard?" << endl;
+    cout << "1_soft." << endl;
+    cout << "2_normal." << endl;
+    cout << "3_very hard." << endl;
+
+    int userChoice;
+    if (!(cin >> userChoice)) return;
+
+    if (userChoice == 1) {
+        cout << "Soft is not good for buying." << endl;
+        return;
+    } else if (userChoice == 2) {
+        cout << "Normal is good." << endl;
+
+        int heaviness;
+        cout << "Is it heavy?" << endl;
+        cout << "1_yes" << endl;
+        cout << "2_no" << endl;
+
+        if (!(cin >> heaviness)) return;
+
+        if (heaviness == 1) {
+            cout << "It is heavy." << endl;
+        } else if (heaviness == 2) {
+            cout << "It is not heavy." << endl;
+        } else {
+            cout << "Invalid input for heaviness." << endl;
+        }
+    } else if (userChoice == 3) {
+        cout << "Very hard is not recommended." << endl;
+        return;
+    } else {
+        cout << "Invalid option for softness." << endl;
+    }
+}
+
+void orange()
+{
+    cout << "Is it heavy?" << endl;
+    cout << "1_yes" << endl;
+    cout << "2_no" << endl;
+
+    int heaviness;
+    if (!(cin >> heaviness)) return;
+
+    if (heaviness == 1) {
+        cout << "Heavy."<<"good"<<endl;
+
+    } else if (heaviness == 2) {
+        cout << "Not heavy."<<"bad"<<endl;
+
+    }
+    cout<<"How is her skin?"<<endl;
+    cout<<"1_Her skin is smooth, for sure."<<endl;
+    cout<<"2_It has a big hole."<<endl;
+    int skin;
+    if (!(cin >> skin)) return;
+
+    if (skin == 1) {
+        cout <<"good"<<endl;
+
+    } else if (skin == 2) {
+        cout <<"bad"<<endl;
+
+    }
+}
+
+int main()
+{
+    int what_number;
+    cout << "Which fruit?" << endl;
+    cout << "1_apple" << endl;
+    cout << "2_orange" << endl;
+
+    if (!(cin >> what_number)) return 1;
+
+    if (what_number == 1) {
+        apple();
+    } else if (what_number == 2) {
+        orange();
+    } else {
+        cout << "Invalid fruit option." << endl;
+    }
+
+    return 0;
+}
